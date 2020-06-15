@@ -1,0 +1,31 @@
+{
+  "name": "simplebipapp",
+  "version": "0.1.0",
+  "description": "Aplicación web para obtener el saldo de tu tarjeta Bip",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "concurrently --kill-others --success first 'http-server -s' 'cypress open'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gpincheiraa/SimpleBipApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gpincheiraa/SimpleBipApp/issues"
+  },
+  "homepage": "https://github.com/gpincheiraa/SimpleBipApp#readme",
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "cypress": "^4.8.0",
+    "cypress-cucumber-preprocessor": "^2.4.0",
+    "http-server": "^0.12.3"
+  },
+  "cypress-cucumber-preprocessor": {
+    "step_definitions": "./e2e/step_definitions"
+  }
+}
